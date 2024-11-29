@@ -58,6 +58,6 @@ runs:
       run: echo "$HOME/.pesde/bin" >> $GITHUB_PATH
 
     - name: Authenticate into Pesde registry
-      if: inputs.pesde-token != ''
+      if: inputs.token != ''
       shell: bash
-      run: pesde auth login --token "${{ inputs.pesde-token }}"
+      run: pesde auth login --token "${{ inputs.token }}"
