@@ -1,5 +1,5 @@
-name: Install pesde
-description: Installs pesde CLI and authenticates with the registry
+name: Setup Pesde
+description: Installs Pesde CLI and authenticates with the registry
 
 inputs:
   version:
