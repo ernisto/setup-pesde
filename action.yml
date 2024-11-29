@@ -61,3 +61,7 @@ runs:
       if: inputs.token != ''
       shell: bash
       run: pesde auth login --token "${{ inputs.token }}"
+
+branding:
+  icon: box
+  color: blue
