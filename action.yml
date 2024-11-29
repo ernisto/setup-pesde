@@ -28,6 +28,7 @@ runs:
           Windows) pattern="*windows-$fileArch.tar.gz" ;;
         esac
 
+        echo $pattern
         gh release download ${{ inputs.version }} --repo pesde-pkg/pesde --pattern $pattern
 
     - name: Install Pesde
