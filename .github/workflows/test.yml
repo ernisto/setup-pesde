@@ -2,14 +2,14 @@ name: Pesde setup test
 on: workflow_dispatch
 
 jobs:
-  publish:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install pesde
+      - name: Install Pesde
         uses: ./
 
-      - name: Install dependencies
+      - name: Verify Pesde version
         run: pesde -v
