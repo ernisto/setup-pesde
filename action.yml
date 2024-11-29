@@ -15,7 +15,7 @@ runs:
     - name: Download Pesde
       shell: bash
       env:
-        GH_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ github.token }}
       run: |
         case ${{ runner.arch }} in
           "X86" | "X64") fileArch="x86_64" ;;
