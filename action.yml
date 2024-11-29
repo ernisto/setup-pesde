@@ -41,7 +41,7 @@ runs:
       shell: bash
       run: |
         rm pesde*.tar.gz
-        if ${{ runner.os == 'Windows' }} then
+        if ${{ runner.os == 'Windows' }}; then
           rm pesde.exe
         else
           rm pesde
