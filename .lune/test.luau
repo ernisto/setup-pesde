@@ -1,0 +1,5 @@
+local stdio = require("@lune/stdio")
+local process = require("@lune/process")
+stdio.write("Hello!\n")
+stdio.write("This script is running via Lune in setup-pesde!")
+process.exit(0)

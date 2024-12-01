@@ -2,7 +2,10 @@ name: Setup Pesde
 description: Installs Pesde CLI and authenticates with the registry
 
 inputs:
-  version:
+  lune-version:
+    description: "Version of Lune to install"
+    required: false
+  pesde-version:
     description: "Version of Pesde to install"
     required: false
   token:
@@ -12,7 +15,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Download Pesde
+    - name: Download Pesde and Lune
       shell: bash
       env:
         GITHUB_TOKEN: ${{ github.token }}
@@ -28,19 +31,22 @@ runs:
           Windows) pattern="*windows-$fileArch.tar.gz" ;;
         esac
 
-        gh release download ${{ inputs.version }} --repo pesde-pkg/pesde --pattern $pattern
+        gh release download ${{ inputs.pesde-version }} --repo pesde-pkg/pesde --pattern $pattern
+        gh release download ${{ inputs.lune-version }} --repo lune-org/lune --pattern $pattern
 
-    - name: Install Pesde
+    - name: Install Pesde and Lune
       shell: bash
       run: |
-        tar -xzvf pesde*.tar.gz
-        chmod +x pesde
+        tar -xzvf pesde*.tar.gz lune*.tar.gz
+        mv pesde* pesde
+        mv lune* lune
+        chmod +x pesde lune
         ./pesde self-install
 
     - name: Remove artifacts
       shell: bash
       run: |
-        rm pesde*.tar.gz
+        rm pesde*.tar.gz lune*.tar.gz
         if ${{ runner.os == 'Windows' }}; then
           rm pesde.exe
         else
@@ -50,12 +56,16 @@ runs:
     - name: Set Windows env variable
       if: runner.os == 'Windows'
       shell: bash
-      run: echo "$HOME/.pesde/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      run: |
+        echo "$HOME/.pesde/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+        echo "lune" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
 
     - name: Set env variable
       if: runner.os != 'Windows'
       shell: bash
-      run: echo "$HOME/.pesde/bin" >> $GITHUB_PATH
+      run: |
+        echo "$HOME/.pesde/bin" >> $GITHUB_PATH
+        echo "lune" >> $GITHUB_PATH
 
     - name: Authenticate into Pesde registry
       if: inputs.token != ''

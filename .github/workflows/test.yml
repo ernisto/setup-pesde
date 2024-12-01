@@ -11,7 +11,16 @@ jobs:
       - name: Install Pesde
         uses: ./
         with:
-            version: 'v0.5.0-rc.13'
+            pesde-version: 'v0.5.0-rc.13'
+            lune-version: 'v0.8.9'
 
-      - name: Verify Pesde version
-        run: pesde -v
+      - name: Test Pesde commands
+        run: |
+            pesde -v
+            pesde add pesde/hello
+            pesde install
+      - name: Test Lune commands
+        run: |
+            lune -V
+            lune run .lune/test.luau
+
