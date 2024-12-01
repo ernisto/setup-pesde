@@ -26,9 +26,9 @@ runs:
         esac
 
         case ${{ runner.os }} in
-          Linux) pattern="*linux-$fileArch.tar.gz" ;;
-          macOS) pattern="*macos-$fileArch.tar.gz" ;;
-          Windows) pattern="*windows-$fileArch.tar.gz" ;;
+          Linux) pattern="*linux-$fileArch.zip" ;;
+          macOS) pattern="*macos-$fileArch.zip" ;;
+          Windows) pattern="*windows-$fileArch.zip" ;;
         esac
 
         gh release download ${{ inputs.pesde-version }} --repo pesde-pkg/pesde --pattern $pattern
@@ -37,8 +37,7 @@ runs:
     - name: Install Pesde and Lune
       shell: bash
       run: |
-        tar -xzvf pesde*.tar.gz lune*.tar.gz
-        mv pesde* pesde
+        unzip pesde*.zip lune*.zip
         mv lune* lune
         chmod +x pesde lune
         ./pesde self-install
@@ -46,7 +45,7 @@ runs:
     - name: Remove artifacts
       shell: bash
       run: |
-        rm pesde*.tar.gz lune*.tar.gz
+        rm pesde*.zip lune*.zip
         if ${{ runner.os == 'Windows' }}; then
           rm pesde.exe
         else
