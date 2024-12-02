@@ -46,7 +46,6 @@ runs:
         chmod +x pesde lune
         ./pesde self-install
         ./lune -V
-        ls
 
     - name: Remove artifacts
       shell: bash
@@ -71,6 +70,8 @@ runs:
       run: |
         echo "$HOME/.pesde/bin" >> $GITHUB_PATH
         echo "./lune" >> $GITHUB_PATH
+        ls
+        echo "$GITHUB_PATH"
 
     - name: Authenticate into Pesde registry
       if: inputs.token != ''
