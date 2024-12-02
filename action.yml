@@ -45,6 +45,7 @@ runs:
         unzip lune.zip
         chmod +x pesde lune
         ./pesde self-install
+        ./lune -V
 
     - name: Remove artifacts
       shell: bash
