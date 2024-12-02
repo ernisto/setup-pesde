@@ -46,6 +46,7 @@ runs:
         chmod +x pesde lune
         ./pesde self-install
         ./lune -V
+        ls
 
     - name: Remove artifacts
       shell: bash
