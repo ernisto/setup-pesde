@@ -1,0 +1,9 @@
+name = "lumin/test"
+version = "0.1.0"
+license = "MIT"
+
+[target]
+environment = "lune"
+
+[indices]
+default = "https://github.com/daimond113/pesde-index"
