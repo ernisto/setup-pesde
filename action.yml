@@ -34,7 +34,7 @@ runs:
         echo $pattern
 
         gh release download ${{ inputs.pesde-version }} --repo pesde-pkg/pesde --pattern $pattern
-        gh release download ${{ inputs.lune-version }} --repo lune-org/lune --pattern $pattern
+       # gh release download ${{ inputs.lune-version }} --repo lune-org/lune --pattern $pattern
 
     - name: Install Pesde and Lune
       shell: bash
