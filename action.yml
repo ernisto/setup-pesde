@@ -39,9 +39,8 @@ runs:
     - name: Install Pesde and Lune
       shell: bash
       run: |
-        ls lune*.zip pesde*.zip
-        ls
-        unzip pesde*.zip lune*.zip
+        unzip pesde*.zip
+        unzip lune*.zip
         mv lune* lune
         mv pesde* pesde
         chmod +x pesde lune
