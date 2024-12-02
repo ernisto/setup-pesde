@@ -4,5 +4,5 @@
 [![cicd](https://img.shields.io/github/actions/workflow/status/2jammers/setup-pesde/test.yml)](https://github.com/2jammers/setup-pesde/releases/latest)
 [![discord](https://img.shields.io/discord/1105688855375511642?logo=discord&logoColor=white&label=discord&color=4d3dff)](https://luminlabsdev.github.io/link/discord)
 
-A github action that sets up Pesde, a package manager for Luau.
+A github action that sets up Pesde and Lune. Pesde is a package manager for Luau/Lune, and Lune is a Luau runtime.
 Forked from `ok-nick/setup-aftman`

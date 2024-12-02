@@ -1,5 +1,5 @@
 name: Setup Pesde
-description: Installs Pesde CLI and authenticates with the registry
+description: Installs Pesde and Lune CLIs, and authenticates with the Pesde registry
 
 inputs:
   lune-version:

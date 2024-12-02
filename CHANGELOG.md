@@ -7,11 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2024-12-01
+
+### Added
+
+* Lune is now installed alongside Pesde as it is a prerequisite
+* `lune-version` input
+
+### Changed
+
+* `version` -> `pesde-version` to create distinct version inputs
+
 ## [0.1.0] - 2024-11-29
 
 ### Added
 
 Initial release!
 
-[unreleased]: https://github.com/2jammers/setup-pesde/compare/v0.1.0...HEAD
+[unreleased]: https://github.com/2jammers/setup-pesde/compare/v0.2.0...HEAD
+[unreleased]: https://github.com/2jammers/setup-pesde/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/2jammers/setup-pesde/tag/v0.1.0
