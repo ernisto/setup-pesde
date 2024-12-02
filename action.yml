@@ -26,10 +26,12 @@ runs:
         esac
 
         case ${{ runner.os }} in
-          Linux) pattern="*linux-$fileArch.zip" ;;
-          macOS) pattern="*macos-$fileArch.zip" ;;
-          Windows) pattern="*windows-$fileArch.zip" ;;
+          Linux) pattern="*-linux-$fileArch.zip" ;;
+          macOS) pattern="*-macos-$fileArch.zip" ;;
+          Windows) pattern="*-windows-$fileArch.zip" ;;
         esac
+
+        echo pattern
 
         gh release download ${{ inputs.pesde-version }} --repo pesde-pkg/pesde --pattern $pattern
         gh release download ${{ inputs.lune-version }} --repo lune-org/lune --pattern $pattern
