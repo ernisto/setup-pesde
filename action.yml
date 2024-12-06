@@ -39,8 +39,9 @@ runs:
           Windows) pattern="*-windows-$fileArch.zip" ;;
         esac
 
-        gh release download ${{ inputs.pesde-version }} --repo pesde-pkg/pesde --pattern "$pattern"
-        gh release download ${{ inputs.lune-version }} --repo￼ lune-org/lune --pattern "$pattern"
+        gh --version
+        gh release download ${{ inputs.pesde-version }} -R pesde-pkg/pesde -p "$pattern"
+        gh release download ${{ inputs.lune-version }} -R lune-org/lune -p "$pattern"
 
     - name: Install Pesde and Lune
       shell: bash
