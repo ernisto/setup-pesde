@@ -48,6 +48,8 @@ runs:
       run: |
         mv lune*.zip lune.zip
         mv pesde*.zip pesde.zip
+        unzip pesde.zip
+        unzip lune.zip
         chmod +x pesde lune
         ./pesde self-install
 
