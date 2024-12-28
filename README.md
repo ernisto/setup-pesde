@@ -1,6 +1,6 @@
 # lumin/setup-pesde
 
-[![test](https://img.shields.io/github/actions/workflow/status/lumin-org/ui/test.yml?style=plastic&logo=github&logoColor=FFFFFF&label=test)](https://github.com/lumin-org/ui/blob/main/.github/workflows/test.yml)
+[![test](https://img.shields.io/github/actions/workflow/status/lumin-org/setup-pesde/test.yml?style=plastic&logo=github&logoColor=FFFFFF&label=test)](https://github.com/lumin-org/setup-pesde/blob/main/.github/workflows/test.yml)
 [![discord](https://img.shields.io/discord/1105688855375511642?logo=discord&logoColor=white&label=chat&color=4d3dff&style=plastic)](https://lumin-org.github.io/to/discord)
 
 A github action that sets up Pesde and Lune.
@@ -23,7 +23,7 @@ steps:
 
 ## Forks
 
-This project was forked from `ok-nick/setup-aftman`
+This project was forked from [`ok-nick/setup-aftman`](https://github.com/ok-nick/setup-aftman)
 
 ## License
 
