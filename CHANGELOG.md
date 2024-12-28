@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+* Changes internal code to be more reliable and readable
+* Cache option will only cache `~/.pesde/bin` now
+
 ## [0.3.0] - 2024-12-06
 
 ### Added
