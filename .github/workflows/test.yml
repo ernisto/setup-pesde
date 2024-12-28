@@ -16,12 +16,10 @@ jobs:
   test-cache:
     uses: ./.github/workflows/env.yml
     with:
-      cache: 'true'
-      pesde-version: 'v0.5.2'
+      cache: true
 
   test:
     uses: ./.github/workflows/env.yml
     with:
-      cache: 'false'
-      pesde-version: 'v0.5.2'
+      cache: false
 
