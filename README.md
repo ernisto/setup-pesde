@@ -18,7 +18,7 @@ Use the latest version of Pesde & Lune, with default parameters
 
 ```yaml
 steps:
-- uses: lumin-org/setup-pesde@v0.4.0
+- uses: lumin-org/setup-pesde@v0.3.1
 ```
 
 ## Forks
