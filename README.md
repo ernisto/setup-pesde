@@ -1,5 +1,6 @@
 # lumin/setup-pesde
 
+[![version](https://img.shields.io/github/v/release/lumin-org/setup-pesde?style=plastic&logo=github&logoColor=FFFFFF&label=version)](https://github.com/lumin-org/setup-pesde/releases/latest)
 [![test](https://img.shields.io/github/actions/workflow/status/lumin-org/setup-pesde/test.yml?style=plastic&logo=github&logoColor=FFFFFF&label=test)](https://github.com/lumin-org/setup-pesde/blob/main/.github/workflows/test.yml)
 [![discord](https://img.shields.io/discord/1105688855375511642?logo=discord&logoColor=white&label=chat&color=4d3dff&style=plastic)](https://lumin-org.github.io/to/discord)
 
