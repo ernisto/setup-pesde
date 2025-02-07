@@ -20,7 +20,7 @@ Use the latest version of Pesde, with default parameters
 
 ```yaml
 steps:
-- uses: lumin-org/setup-pesde@v0.3.3
+- uses: lumin-org/setup-pesde@v0.4.0
 ```
 
 ## Forks
