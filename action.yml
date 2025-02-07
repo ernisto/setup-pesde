@@ -1,11 +1,8 @@
 name: setup-pesde
-description: Installs Pesde and Lune CLIs, and authenticates with the Pesde registry
+description: Installs the Pesde CLI along with Lune 
 
 inputs:
-  lune-version:
-    description: "Version of Lune to install"
-    required: false
-  pesde-version:
+  version:
     description: "Version of Pesde to install"
     required: false
   cache:
@@ -39,8 +36,8 @@ runs:
           Windows) pattern="*-windows-$fileArch.zip" ;;
         esac
 
-        gh release download ${{ inputs.pesde-version }} -R pesde-pkg/pesde -p "$pattern"
-        gh release download ${{ inputs.lune-version }} -R lune-org/lune -p "$pattern"
+        gh release download ${{ inputs.version }} -R pesde-pkg/pesde -p "$pattern"
+        gh release download -R lune-org/lune -p "$pattern"
 
     - name: Install releases
       shell: bash

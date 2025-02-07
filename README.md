@@ -4,22 +4,23 @@
 [![test](https://img.shields.io/github/actions/workflow/status/lumin-org/setup-pesde/test.yml?style=plastic&logo=github&logoColor=FFFFFF&label=test)](https://github.com/lumin-org/setup-pesde/blob/main/.github/workflows/test.yml)
 [![discord](https://img.shields.io/discord/1105688855375511642?logo=discord&logoColor=white&label=chat&color=4d3dff&style=plastic)](https://lumin-org.github.io/to/discord)
 
-A github action that sets up Pesde and Lune.
+A github action that installs the Pesde CLI along with Lune 
 
 ## Prerequisites
 
-In order to use **lumin/setup-pesde** you must be using one of the following architectures:
+In order to use **lumin/setup-pesde** you must be using one of the following server types:
 
-* [`X86_64`](https://en.wikipedia.org/wiki/X86-64)
-* [`AArch64`](https://en.wikipedia.org/wiki/AArch64)
-
+* [`macOS`](https://en.wikipedia.org/wiki/macOS)
+* [`Linux`](https://en.wikipedia.org/wiki/Linux)
+* [`Windows`](https://en.wikipedia.org/wiki/Windows)
+  
 ## Usage
 
-Use the latest version of Pesde & Lune, with default parameters
+Use the latest version of Pesde, with default parameters
 
 ```yaml
 steps:
-- uses: lumin-org/setup-pesde@v0.3.2
+- uses: lumin-org/setup-pesde@v0.3.3
 ```
 
 ## Forks

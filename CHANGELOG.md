@@ -7,38 +7,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- `pesde-version` param to `version`
+
+### Removed
+
+- `lune-version`
+
 ## [0.3.2] - 2024-12-28
 
 ### Changed
 
-* Revert to caching `~/.pesde` dir as a whole
+- Revert to caching `~/.pesde` dir as a whole
 
 ## [0.3.1] - 2024-12-28
 
 ### Changed
 
-* Changes internal code to be more reliable and readable
-* Cache option will only cache `~/.pesde/bin` now
+- Changes internal code to be more reliable and readable
+- Cache option will only cache `~/.pesde/bin` now
 
 ## [0.3.0] - 2024-12-06
 
 ### Added
 
-* Caches `./pesde` directory (default false)
-* `cache` input
-* `path` input
-* Improved testing for all OS types
+- Caches `./pesde` directory (default false)
+- `cache` input
+- `path` input
+- Improved testing for all OS types
 
 ## [0.2.0] - 2024-12-01
 
 ### Added
 
-* Lune is now installed alongside Pesde as it is a prerequisite
-* `lune-version` input
+- Lune is now installed alongside Pesde as it is a prerequisite
+- `lune-version` input
 
 ### Changed
 
-* `version` -> `pesde-version` to create distinct version inputs
+- `version` -> `pesde-version` to create distinct version inputs
 
 ## [0.1.0] - 2024-11-29
 
