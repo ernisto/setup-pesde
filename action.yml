@@ -47,7 +47,11 @@ runs:
           unzip ${file}.zip
           chmod +x ${file}
         done
+
+        # Move Lune bin to HOME
+        mkdir ~/.lune/bin
         mv lune ~/.lune/bin/lune
+
         ./pesde self-install
 
     - name: Add bins to PATH
