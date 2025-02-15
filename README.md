@@ -20,8 +20,26 @@ Use the latest version of Pesde, with default parameters
 
 ```yaml
 steps:
-- uses: lumin-org/setup-pesde@v0.4.0
+- uses: lumin-org/setup-pesde@v0.4.1
 ```
+
+## Inputs
+
+### `version`
+
+The version of Pesde to install.\
+**Default:** `latest`
+
+### `path`
+The path of where the Pesde config file is located.\
+**Default:** `.`
+
+### `cache`
+Whether or not to cache the Pesde install and packages.\
+**Default:** `false`
+
+### `token`
+The security token used for publishing to the Pesde marketplace.\
 
 ## Forks
 
