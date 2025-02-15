@@ -49,7 +49,7 @@ runs:
         done
 
         # Move Lune bin to HOME
-        mkdir ~/.lune/bin
+        mkdir -p ~/.lune/bin
         mv lune ~/.lune/bin/lune
 
         ./pesde self-install
