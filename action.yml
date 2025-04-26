@@ -37,20 +37,13 @@ runs:
         esac
 
         gh release download ${{ inputs.version }} -R pesde-pkg/pesde -p "$pattern"
-        gh release download -R lune-org/lune -p "$pattern"
 
     - name: Install releases
       shell: bash
       run: |
-        for file in lune pesde; do
-          mv ${file}*.zip ${file}.zip
-          unzip ${file}.zip
-          chmod +x ${file}
-        done
-
-        # Move Lune bin to HOME
-        mkdir -p ~/.lune/bin
-        mv lune ~/.lune/bin/lune
+        mv pesde*.zip pesde.zip
+        unzip pesde.zip
+        chmod +x pesde
 
         ./pesde self-install
 
@@ -59,18 +52,11 @@ runs:
       shell: powershell
       run: |
         echo "$HOME/.pesde/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-        echo "$HOME/.lune/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-
-    - name: Add bins to PATH
-      if: runner.os != 'Windows'
-      shell: bash
-      run: |
-        echo -e "$HOME/.pesde/bin\n$HOME/.lune/bin" >> $GITHUB_PATH
 
     - name: Remove artifacts
       shell: bash
       run: |
-        rm pesde.zip lune.zip
+        rm pesde.zip
         if ${{ runner.os == 'Windows' }}; then
           rm pesde.exe
         else
